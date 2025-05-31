@@ -1,0 +1,270 @@
+{
+    "config":[
+      {"Zufriedenheit":{"start":5, "min": 0, "max": 20}},
+      {"Moral":{"start":10, "min": 3, "max": 30}}
+    ],
+
+    "decisions":[{
+      "name": "tutorial",
+      "text":"Bereit? Dann tauche ein in das Jahr 378 n. Chr.\nund stelle dich einer der dramatischsten Schlachten der Spätantike:\n\n**Die Schlacht von Adrianopel.**\n",
+      "question":"Willst du das Spiel starten?",
+      "dead_end":"no",
+      "end_of_game":"no",
+      "answers":[
+          {
+          "nummer": "1",
+          "question":"Ja",
+          "target":"1",
+          "values":[0,0,0,0,0]},
+          {
+          "nummer": "2",
+          "question":"Nein",
+          "target":"0",
+          "values":[0,0,0,0,0] }
+        ]
+        },
+      {"name":"1",
+    "text":"Magister Equitum: 'Majestät, die Goten lagern außerhalb Adrianopeles. Ihre Absichten sind unklar - doch sie sind viele'\nComes Victor(Berater): 'Einige schlagen vor, dass wir handeln. Andere denken es sei eine Falle'\n ",
+    "question":"Magister Equitum: 'Was wollen sie tun Majestät?'",
+    "dead_end":"no",
+    "end_of_game":"no",
+    "answers":[
+        {"nummer": "1", "question":"'Wir Verhandeln. Vielleicht lässt sich ein Blutbad vermeiden!'", "target":"1.1", "values":[5,0,0,0,0]},
+        {"nummer": "2", "question":"'Wir werden angreifen. Ich dulde keine Drohungen'", "target":"2.1", "values":[10,0,0,0,0]},
+        {"nummer": "3", "question":"'Wir benötigen mehr Informationen. Schickt Späher", "target":"3.1", "values":[-5,0,0,0,0]}
+      ]
+      },
+      {"name": "1.1",
+      "text":"Victor: 'Majestät, seid ihr sicher? Es könnte eine Falle sein'\n'Vielleicht. Aber wir sollten einen Kampf verhindern.'",
+      "question":"Mehrere Tage Später:\n\nDu befindest dich in deinem Lager, es ist Nacht und deine Männer benötigen eine Pause\n\n Sollen die Truppen weitermachen oder Weiter die Stellung halten?",
+      "dead_end":"no",
+      "end_of_game":"no",
+      "answers":[
+        {
+          "nummer": "1",
+          "question":"Pause gestatten",
+          "target":"1.2",
+          "values":[0,10,0,0,0] },
+        {
+          "nummer": "2",
+          "question":"Stellung weiter halten",
+          "target":"1.2",
+          "values":[0,-10,-500,0,0] }]
+      },
+      {"name": "1.2",
+       "text":"Ein Abgesannter der Goten erscheint. Sie fordern Land und Nahrung",
+       "question": "Wie handelst du?",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Ich gehe auf eure Forderungen ein'",
+        "target":"1.3",
+        "values":[-20,-5,0,0,-10]},
+        {
+          "nummer":"2",
+          "question":"'Ich gebe euch Nahrung aber kein Land'",
+          "target":"1.4",
+          "values":[0,0,0,0,-10]},
+          {
+            "nummer":"3",
+            "question":"'Ich werde euch nichts geben, das ist erpressung'",
+            "target":"1.5",
+            "values":[0,0,0,0,0]}]
+      },
+      {"name": "1.3",
+       "text":"Magister Equitum: 'Majestät die Goten rücken weiter vor\nSebastianus: 'Die Bürger fordern dass wir handeln, wir könnten dadurch allerdings Truppen verlieren\n\n",
+       "question": "Magister Equitum: 'Was wollen sie tun Majestät?'",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Wir handeln schickt 1000 Truppen um die Goten zu vertreiben'",
+        "target":"4",
+        "values":[0,-1000,0,0,0]},
+        {
+          "nummer":"2",
+          "question":"'Ich will nichts überstürtzen, lasst uns noch warten!",
+          "target":"4",
+          "values":[-10,0,0,0,0]}]
+      },
+      {"name": "1.4",
+       "text":"Zurück in Rom:\n\nMagister Equitum: 'Majestät die Goten bereiten einen Angriff auf Rom vor, die Bürger sind Verunsichert'\n",
+       "question": "Sebastianus: 'Majestät, sollen wir unser Herr verstärken?'",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Ja rekrutiert neue Männer wir können jeden für einen Kampf gebrauchen!'",
+        "target":"4",
+        "values":[0,5000,0,0,0]},
+        {
+          "nummer":"2",
+          "question":"'Nein wir haben genug krieger, wir Brauchen die Leute für die Versorgung Roms",
+          "target":"4",
+          "values":[5,0,0,0,0]}]
+      },
+      {"name": "1.5",
+       "text":"Die Goten sind erzornt aufgrund der Fehlgeschlagenen verhandlungen, sie greifen sofort an!\nÜberascht von dem Angriff bricht Panik aus.'",
+       "question": "Wollen sie Flüchten oder die Gegenwehr leisten?",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Wir Müssen nach Rom flüchten!'",
+        "target":"4",
+        "values":[0,-5000,0,0,0]},
+        {
+          "nummer":"2",
+          "question":"'Stellung halten wir Kämpfen!",
+          "target":"Ende2",
+          "values":[0,0,0,0,0]}]
+      },
+
+      {"name": "2.1",
+       "text":"Ansprache vor dem Herr: 'Männer! Die Goten lagern vor Adrianopel, wir müssen sie zurücktreiben bevor sie uns Angreifen. Also Marschieren wir heute los um die Goten zu bekämpfen!\nFür Adrianopel!",
+       "question": "Nach langem Marschieren wird die Stimmung im Herr schlechter, Magister Equitum: 'Majestät die Truppen vordern eine Pause, sie haben durst und sind Erschöpft.",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Das ist egal! Wir Maschieren Weiter, wir müssen die Goten Überraschen!",
+        "target":"2.2",
+        "values":[0,-5000,-20,0,0]},
+        {
+          "nummer":"2",
+          "question":"'Teilt Wasser aus und gebt ihnen einen kurzen moment Pause!' ",
+          "target":"2.2",
+          "values":[0,0,5,0,0]},
+          {
+            "nummer":"3",
+            "question":"'Wir machen einen Tag pause, wir sind fürs erste genug marschiert!'",
+            "target":"2.2",
+            "values":[0,0,10,0,0]}]
+      },
+      {"name": "2.2",
+       "text":"Am Lager der Goten:\n\nSebastianus: 'Majestät, vor uns liegt jetzt dass Lager der Goten, wir sehen keine bewegung im Lager!",
+       "question": "Magister Equitum: 'Sollen wir Späher schicken um sicher zu gehen dass wir in keine Falle laufen?",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Nein! Wir greifen sofort an, dass ist die Pefekte gelegenheit!",
+        "target":"2.3",
+        "values":[0,-1000,10,0,-5000]},
+        {
+          "nummer":"2",
+          "question":"'Das ist eine gute idee, schickt die Späher los!'",
+          "target":"2.4",
+          "values":[0,0,0,0,0]},
+          {
+            "nummer":"3",
+            "question":"'Wir brauchen keine Späher, wir halten die Stellung bis wir bewegung sehen, dann greifen wir an!",
+            "target":"2.4",
+            "values":[0,0,0,0,0]}]
+      },
+      {"name": "2.3",
+       "text":"Der Angriff war ein voller erfolg und sie konnten die Goten schwächen!\n",
+       "question": "Sebastianus: 'Majestät, Auch wenn unser angriff ein erfolg war sollten wir uns auf einen angriff der Gothen vorbereiten\n sollen wir um verstärkung bei anderen Kaisern beten?",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Das ist eine gute idee, wir können jeden mann gebrauchen!",
+        "target":"4",
+        "values":[0,5000,0,0,0]},
+        {
+          "nummer":"2",
+          "question":"'Nein wir haben genug krieger, wir brauchen keine extra Leute, wir sollten ressourcen sparen!",
+          "target":"4",
+          "values":[0,0,0,0,0]}]
+
+      },
+      {"name": "2.4",
+       "text":"Das lager schreckt beim geräusch von Lautem gebrüll auf\nEs sind die Gothen, sie waren Vorbereitet und haben auf den richtigen Moment gewartet um anzugreifen!",
+       "question": "Panik bricht im Lager aus, die Kriger waren nicht auf einen Angriff auf das Lager vorbereitet, es herrscht Chaos\n\nMagister Equitum: 'Majestät sie sind zu Stark, wir müssen aufgeben und einen neuen Angriff plannen!",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Nein wir werden Kämpfen, wir dürfen keine schwäche zeigen",
+        "target":"Ende2",
+        "values":[0,0,0,0,0]},
+        {
+          "nummer":"2",
+          "question":"'Gute idee, Kündigt den Rückzug an, wir müssen uns geschlagen geben!",
+          "target":"4",
+          "values":[0,0,0,0,0]}]
+      },
+
+      {"name": "3.1",
+       "text":"Sebastianus:'Eure Majestät, wir haben Zwei Späher gefunden welche bereit sind informartionen über die Goten zu holen!",
+       "question": "Magister Equitum: 'Einer von ihnen ist Ortskundig, der andere dafür Schnell! welchen sollen wir entsenden? ",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"'Schickt den Ortskundigen, orientierung ist wichtig!",
+        "target":"3.2",
+        "values":[0,0,0,0,0]},
+        {
+          "nummer":"2",
+          "question":"Schickt den Schnellen reiter, wenn er etwas herausgefunden hat brauchen wir diese info schnell!",
+          "target":"3.2",
+          "values":[0,0,0,0,0]},
+          {
+            "nummer":"3",
+            "question":"Entsendet beide!, beide Aspekte sind wichtig für die Aufgabe!",
+            "target":"3.2",
+            "values":[0,0,0,0,0]}]
+      },
+      {"name": "3.2",
+       "text":"Viele Tage Später:\nSpäher 1:'Eure Majestät wir haben das Lager gefunden, es liegt 3 Tage südlich von Adrianopel! sie haben uns entdeckt und den anderen Späher erwischt!",
+       "question": "Sebastianus: 'Jetzt wo wir wissen wo die Gothen liegen müssen wir über unseren nächsten schritt nachdenken.",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":"1",
+        "question":"Lasst uns die Goten Angreifen und sie vertreiben! sgat den Truppen bescheit wir Maschieren heute noch los",
+        "target":"2.2",
+        "values":[0,0,0,0,0]},
+        {
+          "nummer":"2",
+          "question":"Wir sollten Verstärkung anfordern, die Gothen sollen keine Chance haben uns zu schlagen!",
+          "target":"4",
+          "values":[0,0,0,0,0]},
+          {
+            "nummer":"3",
+            "question":"Wir sollten die Vorrarswege der Goten blockieren, so schwächen wir sie!",
+            "target":"4",
+            "values":[0,0,0,-1000,0]}]
+      },
+
+
+      {"name": "Ende2",
+       "text":"5 Tage später in Rom:\n\nVerkündung: 'Bürger Adrianopels!\n  Beim Lager der Gothen brach eine Schlacht aus, unser Kaiser hat versucht Adrianopel zu verteidigen und die Bedrohung durch die Goten zu beseitigen, dabei ist Kaiser Valens ist an der Seite seines Herrs bei dem Versuch die Front stabil zu halten Gefallen! Die Goten haben gesiegt!\n\n Du bist in der Schlacht gestorben!\nKaiser Valens ist damals auch auf dem Schlachtfeld umgekommen als er Probierte seine Front aufrecht zu alten\nDie Schlacht haben nur ein Paar Römer überlebt\nInsgesamt wird die zahl auf 20.000 Verluste bei dem Herr von Kaiser Valens geschätzt.\n\nDeine Geschichte endet hier, aber du hast es nicht bis zum ende des Spiels geschafft. Probiere es gerne noch einmal!",
+       "dead_end":"yes"
+      },
+      {
+        "name": "0",
+        "text":"Dann nicht",
+        "dead_end":"yes"
+      },
+      {
+        "name": "0.2",
+        "text":"Nachdem du die Verhandlungen der Goten abgewiesen hast, greifen diese Sofort darauf an.\nDie Goten schaffen es sie und ihr Herr gefangen zu nehmen.\nSie werden getötet.\n\nHistorisch Korrektes Ende:\nKönig Valens und sein Herr sind tatsächlich getötet worden, dies geschah allerdings nicht während fehlgeschlagenen Verhandlungen, Sondern auf dem Schlachtfeld. Nur ein Kleiner teil des Herrs konnte flüchten der Rest starb mit Kaiser Valens.\n\nDas war der Kürzeste weg des Abenteuers, Probiere es gerne noch einmal!",
+        "dead_end":"yes"
+      }
+     
+    ]
+}
