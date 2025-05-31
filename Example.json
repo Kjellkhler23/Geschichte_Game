@@ -1,0 +1,22 @@
+{"name": 1.2,
+       "text":"",
+       "question": "",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":1,
+        "question":"",
+        "target":"",
+        "values":[0,0,0,0,0]},
+        {
+          "nummer":2,
+          "question":"",
+          "target":"",
+          "values":[0,0,0,0,0]},
+          {
+            "nummer":3,
+            "question":"",
+            "target":"",
+            "values":[0,0,0,0,0]}]
+      }
