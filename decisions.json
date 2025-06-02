@@ -251,6 +251,30 @@
       },
 
 
+      {"name": "4",
+       "text":"Die Sonne steht hoch. Die Ebene vor dir glitzert in der Hitze, flimmert wie eine Fata Morgana. Vor dir: das gotische Lager, mit Wagenburgen und wachsamen Kriegern. Deine Legionen haben sich in Schlachtordnung formiert – aber die Feinde zeigen sich nicht.\n\nDann – Reiterstaub am Horizont. Sind das Fritigerns Leute? Oder Verstärkung?\n\nEin Bote eilt heran.\n„Kaiser! wir benötigen ihre Entscheidung. Sollen wir angreifen oder die Stellung halten?\n\nDu spürst es im Magen. Dies ist der Moment, in dem Geschichte geschrieben wird.",
+       "question": " ",
+       "dead_end":"no",
+       "end_of_game":"no",
+       "answers":[
+        {
+        "nummer":1,
+        "question":"Wir halten erstmal unsere Position, Verstärkung ist bereits auf dem weg!",
+        "target":"5",
+        "values":[0,0,0,0,0]},
+        {
+          "nummer":2,
+          "question":"Wir greifen sie Frontal an, so können wir unsere gesamte stärke auf einem Punkt sammeln\ndagegen können die Goten nicht standhalten! ",
+          "target":"6",
+          "values":[0,0,0,0,0]},
+          {
+            "nummer":3,
+            "question":"Wir greifen über die Flanken an, so können wir Panik in ihrem Lager auslösen!",
+            "target":"7",
+            "values":[0,0,0,0,0]}]
+      },
+
+
       {"name": "Ende2",
        "text":"5 Tage später in Rom:\n\nVerkündung: 'Bürger Adrianopels!\n  Beim Lager der Gothen brach eine Schlacht aus, unser Kaiser hat versucht Adrianopel zu verteidigen und die Bedrohung durch die Goten zu beseitigen, dabei ist Kaiser Valens ist an der Seite seines Herrs bei dem Versuch die Front stabil zu halten Gefallen! Die Goten haben gesiegt!\n\n Du bist in der Schlacht gestorben!\nKaiser Valens ist damals auch auf dem Schlachtfeld umgekommen als er Probierte seine Front aufrecht zu alten\nDie Schlacht haben nur ein Paar Römer überlebt\nInsgesamt wird die zahl auf 20.000 Verluste bei dem Herr von Kaiser Valens geschätzt.\n\nDeine Geschichte endet hier, aber du hast es nicht bis zum ende des Spiels geschafft. Probiere es gerne noch einmal!",
        "dead_end":"yes"
