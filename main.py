@@ -38,7 +38,7 @@ gegner_min = 1000
 
 #tutorial
 print(colored("Willkommen Spieler,\nWas du gleich erleben wirst, ist ein textbasiertes Spiel.\nDas bedeutet: Die Geschichte entfaltet sich allein durch Worte – deine Vorstellungskraft ist deine stärkste Waffe.\nDu wirst lesen, entscheiden und handeln, nur durch Text.\n\nDu bekommst Situationen beschrieben – manchmal ruhig, manchmal dramatisch –\nund **du wählst aus**, wie dein Charakter reagiert.\n\nManche Entscheidungen verändern den Lauf der Geschichte.\nAndere beeinflussen deine Truppe, die Moral – oder sogar dein Überleben.\nEs gibt **kein richtig oder falsch** – nur Konsequenzen.\n\nUm zu spielen, lies aufmerksam und entscheide dann:\n→ „Will ich kämpfen oder verhandeln?“\n→ „Vertraue ich dem Boten – oder lockt er in eine Falle?“\n **Deine Wahl formt die Geschichte.**","light_green")),
-time.sleep(30)
+input("Wenn du fertig gelesen hast Drücke Enter (Das gilt für alle Texte in dem Spiel)")
 
 
 
@@ -114,7 +114,7 @@ while True:
     if current_decision["dead_end"] == "yes" or current_decision["end_of_game"] == "yes":
         exit()
 
-    time.sleep(5)
+    input("")
 
     print(color.BOLD + color.GREEN + "Eigene Stärke:")
     print(staerke)
