@@ -1,5 +1,5 @@
 To use the "main.py" application you must:
 - Install Colorama
-- Insstall init
+- Install init
 - insall termcolor
 - install colored
